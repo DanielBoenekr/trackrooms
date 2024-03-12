@@ -28,3 +28,13 @@ footer {
   a:hover {
     text-decoration: underline;
   }
+
+  
+  .social-icons {
+    margin-top: 10px; /* Abstand zwischen Links und Social Icons */
+  }
+  
+  .social-icons a {
+    margin-right: 10px; /* Abstand zwischen den Social Icons jo*/
+  }
+  
