@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Header from '../header/Header';
-import DropDown from "../dropdown/DropDown"
+import DropDown from "../dropdown/DropDown";
+import Footer from '../footer/Footer';
+import './FirstPage.css';
 
 function FirstPage() {
     const [openAccordionId, setOpenAccordionId] = useState(null);
@@ -10,9 +12,11 @@ function FirstPage() {
     };
 
     return (
-        <div>
-            <Header />
-            <div>
+        <div className='firstpage'>
+            <header>
+                <Header />
+            </header>
+            <main className="content">
                 <DropDown 
                     id="1" 
                     labelText="Gebäude" 
@@ -22,10 +26,12 @@ function FirstPage() {
                     <h3>6A</h3>
                     <h3>6B</h3>
                 </DropDown>
-            </div>
+            </main>
+            <footer>
+                <Footer/>
+            </footer>
         </div>
     );
 }
 
 export default FirstPage;
-
