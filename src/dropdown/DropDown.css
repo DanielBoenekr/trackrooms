@@ -1,0 +1,10 @@
+.dropdown .label-text{
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer; 
+} 
+
+.dropdown .label-text:hover {
+    background-color: #ddd;
+}
