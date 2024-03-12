@@ -1,9 +1,10 @@
-import Logo from './logo.png'
+import Logo from './logo.png';
+import './Header.css'; 
 
-function Header(){
-    return(
+function Header() {
+    return (
         <div>
-        <img src="./logo.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""></img>
+            <img src={Logo} className="logo" alt="Logo" />
         </div>
     );
 }
