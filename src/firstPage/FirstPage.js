@@ -13,10 +13,12 @@ function FirstPage() {
 
     return (
         <div className='firstpage'>
-            <header>
-                <Header />
-            </header>
-            <main className="content">
+            <div>
+                <header>
+                    <Header />
+                </header>
+            </div>
+            <div className="content">
                 <DropDown 
                     id="1" 
                     labelText="Gebäude" 
@@ -26,7 +28,7 @@ function FirstPage() {
                     <h3>6A</h3>
                     <h3>6B</h3>
                 </DropDown>
-            </main>
+            </div>
             <footer>
                 <Footer/>
             </footer>

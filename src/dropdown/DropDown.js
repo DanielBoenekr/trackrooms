@@ -7,11 +7,33 @@ export default function DropDown({id, open, onClick, labelText, children}){
         onClick(id);
     }
 
+    function toggleDropdown() {
+        var dropdownMenu = document.getElementById("myDropdown");
+        dropdownMenu.classList.toggle("show");
+      }
+      
+      // Schließe das Dropdown-Menü, wenn außerhalb davon geklickt wird
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+
     return( //what is displayed on the screen; instead of labelText do menu photo
-        <div className="dropdown"> 
-            <div className="label-text" onClick={handleClick}>{labelText}</div> 
-            {!!open && <div>{children}</div>}
-             
-        </div>
+    <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+        <a href="#">Eintrag 1</a>
+        <a href="#">Eintrag 2</a>
+        <a href="#">Eintrag 3</a>
+    </div>
+  </div>
     );
 }
